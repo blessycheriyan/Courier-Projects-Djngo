@@ -1,0 +1,82 @@
+/*BASE & CUSTOMER TEMPLATES*/
+
+.navbar {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.navbar .btn {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.container {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+}
+
+a.list-group-item.list-group-item-action.active {
+    background-color: #6772E5;
+    color: #FFF;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #6772E5;
+    color: #FFF;
+}
+
+a.nav-link {
+    color: #000;
+}
+
+.card {
+    font-family: 'Space Grotesk', sans-serif;
+    border-radius: 0;
+    box-shadow: 6px 8px 9px -3px #707070
+}
+
+.list-group {
+    font-family: 'Space Grotesk', sans-serif;
+    border-radius: 0;
+    box-shadow: 6px 8px 9px -3px #707070
+}
+
+.btn {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  background-color: #6772E5;
+  color: #FFF;
+  border-color: #6772E5;
+  border-radius: 0;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5);
+  }
+
+.btn:hover {
+  background-color: #6772E5;
+  box-shadow: 0px 5px 10px;
+  color: #FFF;
+  border-color: #6772E5;
+}
+
+.badge {
+    background-color: #6772E5;
+    color: #FFF;
+}
+
+input.form-control {
+    font-family: 'Space Grotesk', sans-serif;
+    border-radius: 0;
+}
+
+.footer {
+    font-family: 'Space Grotesk', sans-serif;
+}
+.delete-job{
+    padding-left:30px
+}
+.courier-delete-job{
+    float:right;
+    cursor:pointer;
+}

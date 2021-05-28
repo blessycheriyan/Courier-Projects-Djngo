@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+{% load static %}
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'home/assets/images/favicon.svg" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- Web Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="{% static 'home/assets/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/assets/css/LineIcons.2.0.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/assets/css/animate.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/assets/css/tiny-slider.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/assets/css/glightbox.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/assets/css/main.css' %}" />
+
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /End Preloader -->
+
+    <!-- Start Header Area -->
+    <header class="header">
+        <div class="navbar-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand logo" href="/">
+                                <img class="primary-logo" src="{% static 'home/assets/images/logo/ondmnd_logo.png' %}" alt="Logo" />
+                                <img class="alt-logo" src="{% static 'home/assets/images/logo/ondmnd_logo.png' %}" alt="Logo" />
+                            </a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav me-auto">
+                                    <li class="nav-item">
+                                        <a class="page-scroll active" href="#hero-area">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#features">Features</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#explore">Explore</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#testimonials"><i class="fas fa-heart"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- navbar collapse -->
+                        </nav>
+                        <!-- navbar -->
+                    </div>
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+        </div>
+        <!-- navbar area -->
+    </header>
+    <!-- End Header Area -->
+
+    <!-- Start Hero Area -->
+    <section id="hero-area" class="hero-area">
+        <!-- Single Slider -->
+        <div class="hero-inner">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-lg-6 co-12">
+                        <div class="home-slider">
+                            <div class="hero-text">
+                                <h5 class="wow fadeInUp" data-wow-delay=".3s"></h5>
+                                <h1 class="wow fadeInUp" data-wow-delay=".5s">Realtime Package Delivery.<br>Start
+                                    To Finish.<br>40 Minutes.</h1>
+                                <p class="wow fadeInUp" data-wow-delay=".7s">Instant package delivery required?<br><br> 
+                                    Four click job create process.<br>Track your package in realtime along with SMS notifications!<br>
+                                    Delivered with precision & care exactly where, when & how <strong>you</strong> want.<br>
+                                    <br>*98% of packages delivered within 40 minutes of order placement.
+                                </p>
+                                <div class="button wow fadeInUp" data-wow-delay=".9s">
+                                    <a href="{% url 'customer:home' %}" class="btn"><i class="fas fa-user"></i> Customer Login</a>
+                                    <a href="{% url 'courier:home' %}" class="btn primary"><i class="fas fa-car"></i> Courier Login</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="hero-image">
+                            <div class="waves-block">
+                                <div class="waves wave-1"></div>
+                                <div class="waves wave-2"></div>
+                            </div>
+                            <img src="{% static 'home/assets/images/wireframe/home_page_photo.png' %}" alt="#">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Single Slider -->
+    </section>
+    <!--/ End Hero Area -->
+
+ 
+
+    <!-- Start Features Area -->
+    <section id="features" class="features section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <span class="wow fadeInDown" data-wow-delay=".2s">Features</span>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Checkout Our Application<br>
+                            Features Below.</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">Customer experience is at the heart of everything we do.<br> Checkout our current features below.<br> Think we could do better? <br>We would <i class="fas fa-heart"></i> to hear your thoughts! <br> Hit the bell below & tell us how we can improve.<br><a href="mailto:product@ondmnd.io?subject=Let's%20Hear%20It!%20"><i class="far fa-bell fa-3x"></i></a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="single-head">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <!-- Start Single Feature -->
+                        <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
+                            <div class="feature-icon">
+                                <i class="fas fa-search-location"></i>
+                            </div>
+                            <h3>Localisation</h3>
+                            <p>Optimised customer experience via language localisation across all cities.</p>
+                        </div>
+                        <!-- End Single Feature -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <!-- Start Single Feature -->
+                        <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
+                            <div class="feature-icon">
+                                <i class="fas fa-map-pin"></i>
+                            </div>
+                            <h3>Live Tracking</h3>
+                            <p>Realtime data transfer facilitating live tracking from pickup to delivery.</p>
+                        </div>
+                        <!-- End Single Feature -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <!-- Start Single Feature -->
+                        <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
+                            <div class="feature-icon">
+                                <i class="fas fa-sms"></i>
+                            </div>
+                            <h3>Push Notifications</h3>
+                            <p>If realtime isn't enough, monitor package progress via SMS notifications.</p>
+                        </div>
+                        <!-- End Single Feature -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <!-- Start Single Feature -->
+                        <div class="single-feature wow fadeInUp" data-wow-delay=".8s">
+                            <div class="feature-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h3>Secure Billing</h3>
+                            <p>All payment data routed via Stripe & PayPal over secure SSL.</p>
+                        </div>
+                        <!-- End Single Feature -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /End Features Area -->
+
+    <!-- Start App Description Area -->
+    <section id="explore" class="app-description section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-12">
+                    <div class="left wow fadeInLeft" data-wow-delay=".4s">
+                        <img src="{% static 'home/assets/images/wireframe/Map_Image.png' %}" alt="#">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="right wow fadeInRight" data-wow-delay=".6s">
+                        <div class="section-title">
+                            <span>App Details</span>
+                            <h2>Why Use This App</h2>
+                            <p>Need fast delivery of a time sensitive package?
+                                <br>This application offers you quick reliable door to door delivery citywide within 40 minutes.
+                            </p>
+                        </div>
+                        <ul>
+                            <li>
+                                <i class="fas fa-tachometer-alt"></i> <span>Fast</span>
+                                <p>Why wait 24/48 hours for an intra-city package delivery?
+                                    <br>We'll have your package collected & delivered within minutes.
+                                </p>
+                            </li>
+                            <li>
+                                <i class="lni lni-travel"></i> <span>Flexible</span>
+                                <p>Don't want your package collected & delivered right now?
+                                    <br>No problem - Specify location, date & time - We'll take care of the rest.
+                                </p>
+                            </li>
+                            <li>
+                                <i class="fas fa-shipping-fast"></i></i> <span>Fulfillment</span>
+                                <p>Watch your package as it travels the en-route from pickup to delivery.
+                                    <br>Or even listen as the SMS updates roll in if you're driving!
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /End App Description Area -->
+
+    <!-- Start App Description Area -->
+    <section class="app-description style2 section white-bg">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-12">
+                    <div class="right wow fadeInLeft" data-wow-delay=".4s">
+                        <div class="section-title">
+                            <span>The Experience</span>
+                            <h2>A customer experience driven approach to localised delivery</h2>
+                            <p>Time is our most precious asset. Package delivery should not impact your schedule. 
+                                Leverage the simplicity of ONDMND. Have your package delivered where you wish, when you wish.
+                            </p>
+                        </div>
+                        <ul>
+                            <li>
+                                <i class="lni lni-checkmark"></i> 30 Second Signup Process.
+                            </li>
+                            <li>
+                                <i class="lni lni-checkmark"></i> Leverage Powerful API Integrations.
+                            </li>
+                            <li>
+                                <i class="lni lni-checkmark"></i> Just Four Clicks Start To Finish.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="left last wow fadeInRight" data-wow-delay=".6s">
+                        <img src="{% static 'home/assets/images/wireframe/Maps_API.png' %}" alt="#">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /End App Description Area -->
+
+
+    <!-- Start App Screenshort Area -->
+    <section class="app-screenshorts section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <span class="wow fadeInDown" data-wow-delay=".2s">Customers</span>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">How It Works</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">Step through the process below to see just how simple and straightforward it is! We'll have your package delivered within just 30 minutes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="slider-head">
+                        <div class="screenshort-slider">
+                            <div class="single-slider">
+                                <img src="https://via.placeholder.com/315x580" alt="#">
+                            </div>
+                            <div class="single-slider">
+                                <img src="https://via.placeholder.com/315x580" alt="#">
+                            </div>
+                            <div class="single-slider">
+                                <img src="https://via.placeholder.com/315x580" alt="#">
+                            </div>
+                            <div class="single-slider">
+                                <img src="https://via.placeholder.com/315x580" alt="#">
+                            </div>
+                            <div class="single-slider">
+                                <img src="https://via.placeholder.com/315x580" alt="#">
+                            </div>
+                            <div class="single-slider">
+                                <img src="https://via.placeholder.com/315x580" alt="#">
+                            </div>
+                            <div class="single-slider">
+                                <img src="https://via.placeholder.com/315x580" alt="#">
+                            </div>
+                            <div class="single-slider">
+                                <img src="https://via.placeholder.com/315x580" alt="#">
+                            </div>
+                            <div class="single-slider">
+                                <img src="https://via.placeholder.com/315x580" alt="#">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End App Screenshort Area -->
+
+    <!-- Start Achivement Area -->
+    <section class="our-achievement section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-achievement wow fadeInUp" data-wow-delay=".2s">
+                        <i class="fas fa-users"></i>
+                        <h3 class="counter"><span id="secondo1" class="countup" cup-end="25">25</span>K+</h3>
+                        <p>Active Users</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-achievement wow fadeInUp" data-wow-delay=".4s">
+                        <i class="fas fa-shopping-bag"></i>
+                        <h3 class="counter"><span id="secondo2" class="countup" cup-end="85">85</span>K+</h3>
+                        <p>Deliveries</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-achievement wow fadeInUp" data-wow-delay=".6s">
+                        <i class="fas fa-code"></i>
+                        <h3 class="counter"><span id="secondo3" class="countup" cup-end="105">105</span>K+</h3>
+                        <p>Lines Of Code</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-achievement wow fadeInUp" data-wow-delay=".6s">
+                        <i class="fas fa-coffee"></i>
+                        <h3 class="counter"><span id="secondo3" class="countup" cup-end="150">150</span>K+</h3>
+                        <p>Espresso's</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Achivement Area -->
+
+    <!-- Start Testimonials Section -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <span class="wow fadeInDown" data-wow-delay=".2s"><i class="fas fa-heart"></i></span>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Reasons people love us</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">That laser focus on customer experience & value proposition has brought about some pleasant feedback from users in a variety of locations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Start Single Testimonial -->
+                    <div class="single-testimonial">
+                        <div class="top-section">
+                            <img src="https://med69shhs6K1k" alt="#">
+                            <h3>
+                                Clodagh Vance
+                                <span>Dublin, Ireland</span>
+                            </h3>
+                        </div>
+                        <p><i>"Just knowing that I am guaranteed to have my package in 30 minutes & receiving SMS updates at each stage puts my mind totally at ease"</i></p>
+                    </div>
+                    <!-- End Single Testimonial -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Start Single Testimonial -->
+                    <div class="single-testimonial">
+                        <div class="top-section">
+                            <img src="https://me" alt="#">
+                            <h3>
+                                Sam Neatrour
+                                <span>London, United Kingdom</span>
+                            </h3>
+                        </div>
+                        <p><i>"Moving throughout London daily; be able to set delivery location & time is beyond convenient; absolute game changer"</i></p>
+                    </div>
+                    <!-- End Single Testimonial -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Start Single Testimonial -->
+                    <div class="single-testimonial">
+                        <div class="top-section">
+                            <img src="https://m" alt="#">
+                            <h3>
+                                Johann Antoine
+                                <span>Paris, France</span>
+                            </h3>
+                        </div>
+                        <p><i>"La commodité de cette option de livraison et l'expérience utilisateur globale sont magnifiques"</i></p>
+                    </div>
+                    <!-- End Single Testimonial -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Start Single Testimonial -->
+                    <div class="single-testimonial">
+                        <div class="top-section">
+                            <img src="" alt="#">
+                            <h3>
+                                Giuseppe Miriello
+                                <span>Milan, Italy</span>
+                            </h3>
+                        </div>
+                        <p><i>"In qualità di rivenditore che prende molto sul serio l'esperienza del cliente, questo servizio ci ha fornito un vantaggio rispetto ai nostri concorrenti"</i></p>
+                    </div>
+                    <!-- End Single Testimonial -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Start Single Testimonial -->
+                    <div class="single-testimonial">
+                        <div class="top-section">
+                            <img src="" alt="#">
+                            <h3>
+                                Joeri Groenewoud
+                                <span>Amsterdam, Netherlands</span>
+                            </h3>
+                        </div>
+                        <p><i>"Valentijnsdag was de eerste keer dat ik de service gebruikte. Het zien van het ophalen en bezorgen van het kostbare geschenk van mijn vrouw verminderde mijn angst aanzienlijk!"</i></p>
+                    </div>
+                    <!-- End Single Testimonial -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Start Single Testimonial -->
+                    <div class="single-testimonial">
+                        <div class="top-section">
+                            <img src="" alt="#">
+                            <h3>
+                                Kasia Jamborska
+                                <span>Munich, Germany</span>
+                            </h3>
+                        </div>
+                        <p><i>"Nachdem in der Vergangenheit Pakete aus meinem Wohnhaus gestohlen wurden, bedeutet die Verwendung von ONDMND, dass das Problem kein Problem mehr darstellt."</i></p>
+                    </div>
+                    <!-- End Single Testimonial -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /End Testimonials Section -->
+
+    <!-- Start Pricing Table Area -->
+    <section class="pricing-table section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <span class="wow fadeInDown" data-wow-delay=".2s">Couriers</span>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Total Flexibility</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">You Decide Your Own Schedule<br>
+                         Sign Up & Start Today!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Single Table -->
+                    <div class="single-table wow fadeInUp" data-wow-delay=".2s">
+                        <!-- Table Head -->
+                        <div class="table-head">
+                            <div class="price">
+                                <p class="amount">Sign Up<span class="duration">/month</span></p>
+                            </div>
+                            <div class="title">
+                                <h4>Two Minute Process</h4>
+                            </div>
+                        </div>
+                        <!-- End Table Head -->
+
+                        <!-- Table Bottom -->
+                        <div class="button">
+                            <a class="btn" href="#">Good <i class="far fa-grin-wink fa-3x"></i></a>
+                        </div>
+                        <!-- End Table Bottom -->
+                    </div>
+                    <!-- End Single Table-->
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Single Table -->
+                    <div class="single-table wow fadeInUp" data-wow-delay=".4s">
+                        <!-- Table Head -->
+                        <div class="table-head">
+                            <div class="price">
+                                <p class="amount">Deliver<span class="duration">/month</span></p>
+                            </div>
+                            <div class="title">
+                                <h4>Start Immediately</h4>
+                            </div>
+                        </div>
+                        <!-- End Table Head -->
+
+                        <!-- Table Bottom -->
+                        <div class="button">
+                            <a class="btn" href="#">Great <i class="far fa-grin-alt fa-3x"></i></a>
+                        </div>
+                        <!-- End Table Bottom -->
+                    </div>
+                    <!-- End Single Table-->
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Single Table -->
+                    <div class="single-table wow fadeInUp" data-wow-delay=".6s">
+                        <!-- Table Head -->
+                        <div class="table-head">
+                            <div class="price">
+                                <p class="amount">Payment<span class="duration">/month</span></p>
+                            </div>
+                            <div class="title">
+                                <h4>Get Paid Daily</h4>
+                            </div>
+                        </div>
+                        <!-- End Table Head -->
+
+                        <!-- Table Bottom -->
+                        <div class="button">
+                            <a class="btn" href="#">Sign Me Up! <i class="far fa-grin-beam fa-3x"></i></a>
+                        </div>
+                        <!-- End Table Bottom -->
+                    </div>
+                    <!-- End Single Table-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ End Pricing Table Area -->
+
+    <!-- Start Faq Area -->
+    <section class="faq section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-12">
+                    <div class="section-title align-left">
+                        <span class="wow fadeInDown" data-wow-delay=".2s">Frequently asked questions</span>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">We have some FAQ to<br> inform you more</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">Below listed are answers to three common queries.
+                        <br>Feel free to <a href="es...">get in touch</a>
+                         with us & we will get back to you with an immediate response to your query.</p>
+                    </div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <span>Do you deliver outside city boundries?</span><i class="lni lni-chevron-down"></i>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Deliveries are currently handled within the boundries of the city in which the order has been placed.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <span>What is the typical delivery cost?</span><i
+                                        class="lni lni-chevron-down"></i>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Delivery fees are calculated by the kilometer up to a distance where a flat fee makes more sense.</p> 
+                                    <p>The average delivery cost in cities throughout Europe is €7.45 which is still less than the typical carrier fee.</p>
+                                    <p>We just happen to be able to hand deliver packages securely within a matter of minutes as opposed to days.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <span>How long does a typical delivery take?</span><i
+                                        class="lni lni-chevron-down"></i>
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Deliveries typically take between 10 minutes & 40 minutes depending on distance & traffic volumes.</p>
+                                    <p>98% of all package deliveries to date have been executed within the above specified timeframe.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="faq-image wow fadeInRight" data-wow-delay=".6s">
+                        <img src="h" alt="#">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ End Faq Area -->
+
+    <!-- Start Newsletter Area -->
+    <section class="newsletter-area section">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-10 offset-lg-1 col-12">
+                    <div class="section-title">
+                        <span class="wow fadeInDown" data-wow-delay=".2s">Subscribe Now</span>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">
+                            Subscribe to our newsletter to get<br> 
+                            Updates to your inbox.</h2>
+                    </div>
+                    <!-- Start Newsletter Form -->
+                    <div class="subscribe-text wow fadeInUp" data-wow-delay=".2s">
+                        <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+                            <div class="row">
+                                <div class="col-lg-9 col-md-8 col-12">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <input name="Name" placeholder="Your Name" class="common-input"
+                                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'"
+                                                required="" type="text">
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <input name="Email" placeholder="Your Email" class="common-input"
+                                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email'"
+                                                required="" type="email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-12">
+                                    <div class="button">
+                                        <button class="btn">Subscribe Now!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- End Newsletter Form -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /End Newsletter Area -->
+
+    <!-- Start Contact Area -->
+    <section id="contact" class="contact-us section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <span class="wow fadeInDown" data-wow-delay=".2s">Conctact Us</span>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Let’s cooperate!</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">
+                            Should you have any questions for the  feel free submit your query below.
+                            <br>
+                            Alternatively, please see location specific contact details listed for convenience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-head">
+                <div class="inner-content">
+                    <div class="row">
+                        <div class="col-lg-8 col-12">
+                            <div class="form-main">
+                                <form class="form" method="post" action="{% static 'home/assets/mail/' %}">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="form-group">
+                                                <input name="name" type="text" placeholder="Your Name"
+                                                    required="required">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="form-group">
+                                                <input name="subject" type="text" placeholder="Your Subject"
+                                                    required="required">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="form-group">
+                                                <input name="email" type="email" placeholder="Your Email"
+                                                    required="required">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="form-group">
+                                                <input name="phone" type="text" placeholder="Your Phone"
+                                                    required="required">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group message">
+                                                <textarea name="message" placeholder="Your Message"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group button">
+                                                <button type="submit" class="btn ">Send Message</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="contact-info">
+                                <div class="single-head">
+                                    <div class="single-info">
+                                        <i class="lni lni-map-marker"></i>
+                                        <ul>
+
+                                        </ul>
+                                    </div>
+                                    <div class="single-info">
+                                        <i class="lni lni-envelope"></i>
+                                        <ul>
+                                            <li><span>Mail Us</span></li>
+                                            <li><a href=""></a></li>
+                                            <li><a href=></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ End Contact Area -->
+
+    <!-- Start Footer Area -->
+    <footer class="footer">
+        <div class="footer-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <!-- Single Widget -->
+                        <div class="f-about single-footer">
+                            <div class="logo">
+                                <a href="index.html"><img src="{% static 'home/assets/images/logo/ondmnd_logo.png' %}" alt="Logo"></a>
+                            </div>
+                            <p>Leverage the power of  for seamless package delivery, on time, every time throughout cities across the globe.</p>
+                            <div class="footer-social">
+                                <ul><!--TO FOLLOW ONCE SETUP & READY-->
+                                    <!--<li><a href="#"><i class="lni lni-facebook-original"></i></a></li>
+                                    <li><a href="#"><i class="lni lni-twitter-original"></i></a></li>
+                                    <li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
+                                    <li><a href="#"><i class="lni lni-google"></i></a></li>-->
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <!-- Single Widget -->
+                                <div class="single-footer sm-custom-border f-link">
+                                    <h3>About Us</h3>
+                                    <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">Features</a></li>
+                                        <li><a href="#">Explore</a></li>
+                                        <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <!-- End Single Widget -->
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <!-- Single Widget -->
+                                <div class="single-footer sm-custom-border f-link">
+                                    <h3>Features</h3>
+                                    <ul>
+                                        <li><a href="#">Easy To Use</a></li>
+                                        <li><a href="#">Device Agnostic</a></li>
+                                        <li><a href="#">Realtime Tracking</a></li>
+                                        <li><a href="#">SMS Notifications</a></li>
+                                    </ul>
+                                </div>
+                                <!-- End Single Widget -->
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <!-- Single Widget -->
+                                
+                                <!-- End Single Widget -->
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <!-- Single Widget -->
+                                <div class="single-footer md-custom-border sm-custom-border f-contact">
+                                    <h3>Contact Info</h3>
+                                    <ul>
+
+                                    </ul>
+                                </div>
+                                <!-- End Single Widget -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Footer Middle -->
+        <!-- Start Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="left">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Middle -->
+    </footer>
+    <!--/ End Footer Area -->
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top btn-hover">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <script src="{% static 'home/assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'home/assets/js/count-up.min.js' %}"></script>
+    <script src="{% static 'home/assets/js/wow.min.js' %}"></script>
+    <script src="{% static 'home/assets/js/tiny-slider.js' %}"></script>
+    <script src="{% static 'home/assets/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'home/assets/js/imagesloaded.min.js' %}"></script>
+    <script src="{% static 'home/assets/js/isotope.min.js' %}"></script>
+    <script src="{% static 'home/assets/js/main.js' %}"></script>
+    <script type="text/javascript">
+        //========= App Screenshort 
+        tns({
+            container: '.screenshort-slider',
+            items: 1,
+            slideBy: 'page',
+            autoplay: false,
+            mouseDrag: true,
+            gutter: 0,
+            nav: true,
+            controls: false,
+            controlsText: ['<i class="lni lni-chevron-left"></i>', '<i class="lni lni-chevron-right"></i>'],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                540: {
+                    items: 1,
+                },
+                768: {
+                    items: 3,
+                },
+                992: {
+                    items: 3,
+                },
+                1170: {
+                    items: 4,
+                }
+            }
+        });
+
+        //========= glightbox
+        GLightbox({
+            'href': '',
+            'type': 'video',
+            'source': 'youtube', //vimeo, youtube or local
+            'width': 900,
+            'autoplayVideos': true,
+        });
+    </script>
+</body>
+
+</html>
+

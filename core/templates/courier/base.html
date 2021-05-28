@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courier | </title>
+  <link rel="shortcut icon" href="{% static 'img/logo.png' %}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/logo.png' %}">
+  <link rel="manifest" href="{% static 'manifest.json' %}">
+
+  {% load bootstrap4 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript jquery='full' %}
+
+  {% include 'load_firebase.html' %}
+
+  <script>
+    const messaging = firebase.messaging();
+    messaging
+      .getToken({
+        validKey: ""
+      })
+      .then((currentToken) => {
+        console.log(currentToken);
+        if (currentToken) {
+          fetch('{% url "courier:fcm_token_update_api" %}?fcm_token=' + currentToken);
+        }
+      })
+      .catch((err) => {
+        console.log('An error occured while retrieving token. ', err);
+      })
+  </script>
+
+  <script>
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  </script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+  <style>
+    #content {
+      height: calc(var(--vh, 1vh) * 100);
+    }
+
+    .media.align-items-center.p-3 {
+        background-color: #6772E5;
+    }
+
+  </style>
+
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+  <div id="content">
+    {% block content %}{% endblock %}
+  </div>
+
+  <script src="https://unpkg.com/bootoast@1.0.1/dist/bootoast.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/bootoast@1.0.1/dist/bootoast.min.css">
+
+  <script>
+    function toast(message, type) {
+      bootoast.toast({
+        position: 'centerBottom',
+        message,
+        type,
+      });
+    }
+
+    {% if messages %}
+
+    {% for message in messages %}
+    toast('{{ message }}', '{{ message.tags }}');
+    {% endfor %}
+
+    {% endif %}
+  </script>
+</body>
+
+</html>

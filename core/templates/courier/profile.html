@@ -1,0 +1,65 @@
+{% extends 'courier/base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block content %}
+
+<div class="media align-items-center p-3">
+
+  <a href="{% url 'courier:change_avatar' %}">  <img src="{% if request.user.courier.avatar %}{{ request.user.courier.avatar.url }}{% else %}{% static 'img/avatar.png' %}{% endif %}" class="rounded-circle" width="60" height="60">
+</a>
+
+  <div class="media-body ml-4">
+    <h4 class="mb-0" style="color:#FFF">{{ request.user.get_full_name }}</h4>
+  </div>
+</div>
+
+  <div class="mt-4 p-2 mb-5">
+    <b class="text-secondary">Profile</b>
+    <a href="{% url 'courier:driver_details' %}" class="btn btn-outline-light btn-block btn-md mt-2">
+      Update
+    </a>
+  </div>
+
+
+<div class="mt-4 p-2 mb-5">
+  <b class="text-secondary">PAYOUT</b>
+  <a href="{% url 'courier:payout_method' %}" class="btn btn-outline-light btn-block btn-md mt-2">
+    Setup
+  </a>
+</div>
+
+<div class="mt-2 p-2">
+  <b class="text-secondary">SUMMARY</b>
+  <hr />
+
+  <div class="d-flex text-center">
+    <div class="flex-grow-1">
+      <h4 class="text-success">€{{ total_earnings }}</h4>
+      <span class="text-secondary">Total Earnings</span>
+    </div>
+    <div class="flex-grow-1">
+      <h4 class="text-success">{{ total_jobs }} Jobs</h4>
+      <span class="text-secondary">Completed</span>
+    </div>
+    <div class="flex-grow-1">
+      <h4 class="text-success">{{ total_km }} Km</h4>
+      <span class="text-secondary">Driven</span>
+    </div>
+  </div>
+  <hr />
+</div>
+
+
+<div class="p-2">
+  <a href="/sign-out/" class="btn btn-block btn-light btn-md mt-2">
+    <i class="fas fa-sign-out-alt mr-1"></i>
+    Sign Out
+  </a>
+</div>
+
+{% include 'courier/bottom_tabs.html' %}
+
+{% endblock %}
+
+

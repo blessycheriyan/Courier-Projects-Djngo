@@ -1,0 +1,84 @@
+{% extends 'customer/base.html' %}
+
+{% block main %}
+
+{% url 'customer:current_jobs' as current_jobs_url %}
+{% url 'customer:archived_jobs' as archived_jobs_url %}
+
+<!-- TABS -->
+<ul class="nav nav-pills nav-fill">
+  <li class="nav-item">
+    <a class="nav-link {% if request.path == current_jobs_url %}active{% endif %}"
+      href="{% url 'customer:current_jobs' %}">Current Job</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link {% if request.path == archived_jobs_url %}active{% endif %}"
+      href="{% url 'customer:archived_jobs' %}">Archived Jobs</a>
+  </li>
+</ul>
+<script>
+  $(document).on("click",".delete-job",function(event){
+       event.preventDefault();
+      var url = $(this).attr("data-target")
+      var $this = $(this)
+      $.ajax({
+            url: url,
+            type:"POST",
+            data:{'csrfmiddlewaretoken':'{{ csrf_token }}'},
+            success: function(response) {
+               location.reload();
+            }
+        })
+  })
+</script>
+<!-- LIST OF JOBS -->
+<div class="list-group mt-3">
+  {% if jobs %}
+
+  {% for job in jobs %}
+  <a href="{% url 'customer:job' job.id %}" class="list-group-item list-group-item-action">
+    <div class="media">
+      <div class="media-body">
+        <div class="row">
+
+          <div class="col-lg-9">
+            <h5 class="mb-1">{{ job.order_no }}</h5>
+
+            <div class="d-flex mb-4">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="ml-2">
+                <b>{{ job.pickup_name }}</b><br />
+                <small>{{ job.pickup_address }}</small>
+              </div>
+            </div>
+            <div class="d-flex">
+              <i class="fas fa-flag-checkered"></i>
+              <div class="ml-2">
+                <b>{{ job.delivery_name }}</b><br />
+                <small>{{ job.delivery_address }}</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 text-right d-flex flex-column justify-content-between">
+            <div><span class="badge badge-light mb-2">{{ job.get_status_display }}</span> <span class="delete-job" data-target="/customer/delete-job/{{job.id}}/"><i class="fas fa-trash-alt"></i></span></div>
+            <h2 class="mb-1">€{{ job.price }}</h2>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </a>
+
+  {% endfor %}
+
+  {% else %}
+  <div class="card">
+    <div class="card-body text-center">
+      Nothing to show here yet.
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+{% endblock %}

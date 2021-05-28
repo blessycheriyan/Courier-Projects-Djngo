@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+
+    <div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="text-center text-uppercase mb-3">
+                        <b>
+                            {% if request.GET.next != '/courier/' %}
+                            Customer
+                            {% else %}
+                            Courier
+                            {% endif %}
+                        </b>
+                    </h4>
+
+                    <form method="POST">
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                        <button type="submit" class="btn btn-light btn-block">Sign Up</button>
+                        <p class="text-center mt-3">Already Signed Up?
+                            <button class="btn btn-light btn-block">
+                                <a href="/sign-in/?next=/courier/" style="color:#FFF; text-decoration:none">Log In</a>
+                            </button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

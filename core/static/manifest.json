@@ -1,0 +1,14 @@
+{
+  "short_name": "ONDMND",
+  "name": "Welcome to ONDMND App",
+  "description": "On Demand Delivery Service",
+  "icons": [
+    {
+      "src": "/static/img/logo.png",
+      "type": "image/png",
+      "sizes": "500x500"
+    }
+  ],
+  "start_url": "/courier/",
+  "display": "standalone"
+}
